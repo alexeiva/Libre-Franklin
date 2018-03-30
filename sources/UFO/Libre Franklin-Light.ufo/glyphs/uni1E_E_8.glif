@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1EE8" format="1">
+  <advance width="702"/>
+  <unicode hex="1EE8"/>
+  <outline>
+    <component base="Uhorn"/>
+    <component base="acutecomb" xOffset="219" yOffset="212"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-09-02 21:55:29 +0000</string>
+    </dict>
+  </lib>
+</glyph>

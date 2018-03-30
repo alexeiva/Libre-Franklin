@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1E7B" format="1">
+  <advance width="571"/>
+  <unicode hex="1E7B"/>
+  <outline>
+    <component base="u"/>
+    <component base="uni0304" xOffset="132"/>
+    <component base="uni0308" xOffset="177" yOffset="122"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-02 16:06:03 +0000</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

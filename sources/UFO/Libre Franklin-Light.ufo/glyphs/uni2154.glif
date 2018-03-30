@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni2154" format="1">
+  <advance width="964"/>
+  <unicode hex="2154"/>
+  <outline>
+    <component base="two.numr" xOffset="40"/>
+    <component base="fraction" xOffset="367"/>
+    <component base="three.dnom" xOffset="565"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-09-02 21:53:43 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.ComponentInfo</key>
+      <array>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>0</integer>
+          <key>name</key>
+          <string>two.numr</string>
+        </dict>
+        <dict>
+          <key>alignment</key>
+          <integer>-1</integer>
+          <key>index</key>
+          <integer>2</integer>
+          <key>name</key>
+          <string>three.dnom</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

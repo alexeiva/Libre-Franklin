@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0312" format="1">
+  <advance width="164"/>
+  <unicode hex="0312"/>
+  <outline>
+    <component base="uni0326" xOffset="124" yOffset="562" xScale="-1" yScale="-1"/>
+    <contour>
+      <point x="82" y="788" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="82" y="530" type="move" name="_top"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-02 11:15:16 +0000</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

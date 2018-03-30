@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni04FB" format="1">
+  <advance width="501"/>
+  <unicode hex="04FB"/>
+  <outline>
+    <contour>
+      <point x="275" y="-170"/>
+      <point x="356" y="-119"/>
+      <point x="356" y="-14" type="curve" smooth="yes"/>
+      <point x="356" y="63" type="line" smooth="yes"/>
+      <point x="356" y="78"/>
+      <point x="348" y="86"/>
+      <point x="337" y="86" type="curve" smooth="yes"/>
+      <point x="301" y="86" type="line" smooth="yes"/>
+      <point x="291" y="86"/>
+      <point x="285" y="93"/>
+      <point x="285" y="101" type="curve"/>
+      <point x="285" y="86" type="line"/>
+      <point x="125" y="86" type="line"/>
+      <point x="125" y="0" type="line"/>
+      <point x="173" y="0" type="line" smooth="yes"/>
+      <point x="183" y="0"/>
+      <point x="189" y="-5"/>
+      <point x="189" y="-14" type="curve" smooth="yes"/>
+      <point x="189" y="-48"/>
+      <point x="163" y="-63"/>
+      <point x="129" y="-66" type="curve"/>
+      <point x="116" y="-68"/>
+      <point x="109" y="-82"/>
+      <point x="109" y="-93" type="curve" smooth="yes"/>
+      <point x="110" y="-145" type="line" smooth="yes"/>
+      <point x="110" y="-164"/>
+      <point x="128" y="-170"/>
+      <point x="158" y="-170" type="curve" smooth="yes"/>
+    </contour>
+    <component base="uni0493"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 12:08:35 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>ghestroke-cy</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>ge-cy</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

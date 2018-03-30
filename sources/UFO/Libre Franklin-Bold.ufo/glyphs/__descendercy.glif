@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="__descendercy" format="1">
+  <advance width="52"/>
+  <outline>
+    <contour>
+      <point x="130" y="-110" type="line" smooth="yes"/>
+      <point x="151" y="-110"/>
+      <point x="157" y="-102"/>
+      <point x="157" y="-85" type="curve" smooth="yes"/>
+      <point x="157" y="113" type="line" smooth="yes"/>
+      <point x="157" y="128"/>
+      <point x="149" y="136"/>
+      <point x="138" y="136" type="curve"/>
+      <point x="102" y="136" type="line" smooth="yes"/>
+      <point x="92" y="136"/>
+      <point x="86" y="143"/>
+      <point x="86" y="151" type="curve"/>
+      <point x="86" y="136" type="line"/>
+      <point x="-74" y="136" type="line"/>
+      <point x="-74" y="0" type="line"/>
+      <point x="-26" y="0" type="line" smooth="yes"/>
+      <point x="-16" y="0"/>
+      <point x="-10" y="-7"/>
+      <point x="-10" y="-15" type="curve" smooth="yes"/>
+      <point x="-10" y="-81" type="line" smooth="yes"/>
+      <point x="-10" y="-102"/>
+      <point x="0" y="-110"/>
+      <point x="23" y="-110" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="-95" y="0" type="move" name="_bottomright"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>10</integer>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 09:50:03 +0000</string>
+      <key>public.markColor</key>
+      <string>0.75,0.75,0.75,1</string>
+    </dict>
+  </lib>
+</glyph>

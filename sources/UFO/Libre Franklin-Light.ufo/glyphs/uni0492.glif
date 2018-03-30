@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0492" format="1">
+  <advance width="540"/>
+  <unicode hex="0492"/>
+  <outline>
+    <contour>
+      <point x="116" y="10" type="line" smooth="yes"/>
+      <point x="116" y="2"/>
+      <point x="118" y="0"/>
+      <point x="125" y="0" type="curve" smooth="yes"/>
+      <point x="155" y="0" type="line" smooth="yes"/>
+      <point x="160" y="0"/>
+      <point x="162" y="2"/>
+      <point x="162" y="7" type="curve"/>
+      <point x="162" y="693" type="line"/>
+      <point x="162" y="701"/>
+      <point x="164" y="702"/>
+      <point x="171" y="702" type="curve" smooth="yes"/>
+      <point x="509" y="702" type="line" smooth="yes"/>
+      <point x="515" y="702"/>
+      <point x="517" y="703"/>
+      <point x="517" y="709" type="curve" smooth="yes"/>
+      <point x="517" y="735" type="line" smooth="yes"/>
+      <point x="517" y="740"/>
+      <point x="515" y="742"/>
+      <point x="510" y="742" type="curve" smooth="yes"/>
+      <point x="125" y="742" type="line" smooth="yes"/>
+      <point x="118" y="742"/>
+      <point x="116" y="740"/>
+      <point x="116" y="732" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="376" y="399"/>
+      <point x="374" y="402"/>
+      <point x="369" y="402" type="curve" smooth="yes"/>
+      <point x="17" y="402" type="line" smooth="yes"/>
+      <point x="12" y="402"/>
+      <point x="10" y="399"/>
+      <point x="10" y="393" type="curve" smooth="yes"/>
+      <point x="10" y="370" type="line" smooth="yes"/>
+      <point x="10" y="363"/>
+      <point x="12" y="360"/>
+      <point x="20" y="360" type="curve" smooth="yes"/>
+      <point x="363" y="360" type="line" smooth="yes"/>
+      <point x="372" y="360"/>
+      <point x="376" y="363"/>
+      <point x="376" y="371" type="curve" smooth="yes"/>
+      <point x="376" y="394" type="line" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 12:08:35 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>Ge-cy</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

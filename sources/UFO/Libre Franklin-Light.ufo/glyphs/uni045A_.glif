@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni045A" format="1">
+  <advance width="849"/>
+  <unicode hex="045A"/>
+  <outline>
+    <contour>
+      <point x="622" y="0" type="line" smooth="yes"/>
+      <point x="744" y="0"/>
+      <point x="809" y="50"/>
+      <point x="809" y="162" type="curve" smooth="yes"/>
+      <point x="809" y="249"/>
+      <point x="756" y="316"/>
+      <point x="601" y="316" type="curve" smooth="yes"/>
+      <point x="496" y="316" type="line"/>
+      <point x="496" y="380" type="line"/>
+      <point x="476" y="380" type="line"/>
+      <point x="476" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="496" y="281" type="line"/>
+      <point x="600" y="281" type="line" smooth="yes"/>
+      <point x="706" y="281"/>
+      <point x="767" y="246"/>
+      <point x="767" y="162" type="curve" smooth="yes"/>
+      <point x="767" y="72"/>
+      <point x="719" y="35"/>
+      <point x="618" y="35" type="curve" smooth="yes"/>
+      <point x="496" y="35" type="line"/>
+    </contour>
+    <component base="uni043D"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 12:08:35 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>en-cy</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>softsign-cy</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

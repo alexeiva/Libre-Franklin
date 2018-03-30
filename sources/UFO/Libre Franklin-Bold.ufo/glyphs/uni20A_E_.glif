@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni20AE" format="1">
+  <advance width="704"/>
+  <unicode hex="20AE"/>
+  <outline>
+    <contour>
+      <point x="568" y="539"/>
+      <point x="558" y="544"/>
+      <point x="548" y="540" type="curve" smooth="yes"/>
+      <point x="106" y="380" type="line" smooth="yes"/>
+      <point x="95" y="376"/>
+      <point x="91" y="366"/>
+      <point x="96" y="351" type="curve" smooth="yes"/>
+      <point x="114" y="302" type="line" smooth="yes"/>
+      <point x="120" y="286"/>
+      <point x="128" y="280"/>
+      <point x="147" y="287" type="curve" smooth="yes"/>
+      <point x="568" y="440" type="line" smooth="yes"/>
+      <point x="590" y="448"/>
+      <point x="597" y="459"/>
+      <point x="590" y="478" type="curve" smooth="yes"/>
+      <point x="572" y="527" type="line" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="588" y="380"/>
+      <point x="579" y="385"/>
+      <point x="569" y="381" type="curve" smooth="yes"/>
+      <point x="127" y="221" type="line" smooth="yes"/>
+      <point x="115" y="217"/>
+      <point x="112" y="207"/>
+      <point x="117" y="192" type="curve" smooth="yes"/>
+      <point x="135" y="143" type="line" smooth="yes"/>
+      <point x="141" y="127"/>
+      <point x="149" y="121"/>
+      <point x="168" y="128" type="curve" smooth="yes"/>
+      <point x="589" y="281" type="line" smooth="yes"/>
+      <point x="611" y="289"/>
+      <point x="617" y="300"/>
+      <point x="610" y="318" type="curve" smooth="yes"/>
+      <point x="592" y="368" type="line" smooth="yes"/>
+    </contour>
+    <component base="T"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-13 21:49:24 +0000</string>
+    </dict>
+  </lib>
+</glyph>

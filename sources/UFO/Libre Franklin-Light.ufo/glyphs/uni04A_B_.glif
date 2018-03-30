@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni04AB" format="1">
+  <advance width="537"/>
+  <unicode hex="04AB"/>
+  <outline>
+    <contour>
+      <point x="311" y="-142" type="line" smooth="yes"/>
+      <point x="317" y="-142"/>
+      <point x="320" y="-139"/>
+      <point x="320" y="-132" type="curve" smooth="yes"/>
+      <point x="320" y="13" type="line"/>
+      <point x="280" y="13" type="line"/>
+      <point x="280" y="-133" type="line" smooth="yes"/>
+      <point x="280" y="-140"/>
+      <point x="283" y="-142"/>
+      <point x="290" y="-142" type="curve" smooth="yes"/>
+    </contour>
+    <component base="uni0441"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 12:08:35 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>c</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>c</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

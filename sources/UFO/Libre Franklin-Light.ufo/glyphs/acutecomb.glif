@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="acutecomb" format="1">
+  <advance width="272"/>
+  <unicode hex="0301"/>
+  <outline>
+    <contour>
+      <point x="254" y="755"/>
+      <point x="250" y="756"/>
+      <point x="247" y="755" type="curve" smooth="yes"/>
+      <point x="18" y="664" type="line" smooth="yes"/>
+      <point x="15" y="663"/>
+      <point x="13" y="659"/>
+      <point x="15" y="654" type="curve" smooth="yes"/>
+      <point x="20" y="639" type="line" smooth="yes"/>
+      <point x="22" y="633"/>
+      <point x="25" y="632"/>
+      <point x="31" y="634" type="curve" smooth="yes"/>
+      <point x="258" y="708" type="line" smooth="yes"/>
+      <point x="266" y="711"/>
+      <point x="267" y="714"/>
+      <point x="265" y="720" type="curve" smooth="yes"/>
+      <point x="255" y="752" type="line" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="140" y="665" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="136" y="530" type="move" name="_top"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-02 15:54:18 +0000</string>
+    </dict>
+  </lib>
+</glyph>

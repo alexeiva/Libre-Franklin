@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni049D" format="1">
+  <advance width="635"/>
+  <unicode hex="049D"/>
+  <outline>
+    <contour>
+      <point x="330" y="106" type="line" smooth="yes"/>
+      <point x="342" y="106"/>
+      <point x="350" y="113"/>
+      <point x="350" y="124" type="curve" smooth="yes"/>
+      <point x="350" y="409" type="line" smooth="yes"/>
+      <point x="350" y="421"/>
+      <point x="342" y="428"/>
+      <point x="327" y="428" type="curve" smooth="yes"/>
+      <point x="294" y="428" type="line" smooth="yes"/>
+      <point x="277" y="428"/>
+      <point x="269" y="422"/>
+      <point x="269" y="402" type="curve" smooth="yes"/>
+      <point x="269" y="139" type="line" smooth="yes"/>
+      <point x="269" y="116"/>
+      <point x="277" y="106"/>
+      <point x="297" y="106" type="curve" smooth="yes"/>
+    </contour>
+    <component base="uni043A" xOffset="9"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 12:08:35 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>en-cy</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>ka-cy</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

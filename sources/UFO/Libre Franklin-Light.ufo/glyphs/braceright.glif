@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="braceright" format="1">
+  <advance width="267"/>
+  <unicode hex="007D"/>
+  <outline>
+    <component base="braceleft" xOffset="267" xScale="-1"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-14 13:54:06 +0000</string>
+    </dict>
+  </lib>
+</glyph>

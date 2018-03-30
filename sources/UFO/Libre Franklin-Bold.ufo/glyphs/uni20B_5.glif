@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni20B5" format="1">
+  <advance width="737"/>
+  <unicode hex="20B5"/>
+  <outline>
+    <contour>
+      <point x="428" y="-73" type="line" smooth="yes"/>
+      <point x="435" y="-73"/>
+      <point x="443" y="-68"/>
+      <point x="443" y="-57" type="curve"/>
+      <point x="443" y="780" type="line"/>
+      <point x="443" y="797"/>
+      <point x="435" y="802"/>
+      <point x="421" y="802" type="curve" smooth="yes"/>
+      <point x="336" y="802" type="line" smooth="yes"/>
+      <point x="329" y="802"/>
+      <point x="321" y="797"/>
+      <point x="321" y="786" type="curve"/>
+      <point x="321" y="-51" type="line"/>
+      <point x="321" y="-68"/>
+      <point x="329" y="-73"/>
+      <point x="343" y="-73" type="curve" smooth="yes"/>
+    </contour>
+    <component base="C"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-02 10:21:50 +0000</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

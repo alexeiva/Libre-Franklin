@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni04B3" format="1">
+  <advance width="664"/>
+  <unicode hex="04B3"/>
+  <outline>
+    <contour>
+      <point x="593" y="-110" type="line" smooth="yes"/>
+      <point x="614" y="-110"/>
+      <point x="620" y="-102"/>
+      <point x="620" y="-85" type="curve" smooth="yes"/>
+      <point x="620" y="86" type="line" smooth="yes"/>
+      <point x="620" y="101"/>
+      <point x="612" y="109"/>
+      <point x="601" y="109" type="curve"/>
+      <point x="571" y="109" type="line" smooth="yes"/>
+      <point x="555" y="109"/>
+      <point x="545" y="110"/>
+      <point x="534" y="127" type="curve"/>
+      <point x="448" y="0" type="line"/>
+      <point x="458" y="0"/>
+      <point x="464" y="-10"/>
+      <point x="464" y="-18" type="curve" smooth="yes"/>
+      <point x="464" y="-81" type="line" smooth="yes"/>
+      <point x="464" y="-102"/>
+      <point x="474" y="-110"/>
+      <point x="497" y="-110" type="curve" smooth="yes"/>
+    </contour>
+    <component base="uni0445"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 12:08:35 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>x</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>kadescender-cy</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

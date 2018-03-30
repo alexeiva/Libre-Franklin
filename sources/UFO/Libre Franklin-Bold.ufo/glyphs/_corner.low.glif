@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_corner.low" format="1">
+  <advance width="122"/>
+  <outline>
+    <contour>
+      <point x="22" y="0" type="move"/>
+      <point x="9" y="0"/>
+      <point x="0" y="6"/>
+      <point x="0" y="19" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-02 16:48:34 +0000</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni04E8" format="1">
+  <advance width="758"/>
+  <unicode hex="04E8"/>
+  <outline>
+    <contour>
+      <point x="663" y="406" type="line"/>
+      <point x="110" y="406" type="line"/>
+      <point x="110" y="366" type="line"/>
+      <point x="663" y="366" type="line"/>
+    </contour>
+    <component base="O" yOffset="12"/>
+    <contour>
+      <point x="379" y="742" type="move" name="top"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>4</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 12:08:35 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>O</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>O</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

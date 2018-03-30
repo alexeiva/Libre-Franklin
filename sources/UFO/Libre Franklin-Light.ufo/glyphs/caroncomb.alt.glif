@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="caroncomb.alt" format="1">
+  <advance width="88"/>
+  <outline>
+    <contour>
+      <point x="31" y="567" type="line" smooth="yes"/>
+      <point x="39" y="567"/>
+      <point x="42" y="569"/>
+      <point x="44" y="574" type="curve" smooth="yes"/>
+      <point x="77" y="650" type="line" smooth="yes"/>
+      <point x="77" y="651"/>
+      <point x="78" y="652"/>
+      <point x="78" y="654" type="curve" smooth="yes"/>
+      <point x="78" y="736" type="line" smooth="yes"/>
+      <point x="78" y="740"/>
+      <point x="76" y="742"/>
+      <point x="73" y="742" type="curve" smooth="yes"/>
+      <point x="30" y="742" type="line" smooth="yes"/>
+      <point x="26" y="742"/>
+      <point x="24" y="740"/>
+      <point x="24" y="735" type="curve" smooth="yes"/>
+      <point x="24" y="662" type="line" smooth="yes"/>
+      <point x="24" y="656"/>
+      <point x="26" y="655"/>
+      <point x="32" y="654" type="curve" smooth="yes"/>
+      <point x="37" y="653" type="line" smooth="yes"/>
+      <point x="42" y="652"/>
+      <point x="42" y="650"/>
+      <point x="40" y="644" type="curve" smooth="yes"/>
+      <point x="10" y="574" type="line" smooth="yes"/>
+      <point x="9" y="571"/>
+      <point x="11" y="567"/>
+      <point x="15" y="567" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="73" y="742" type="move" name="_topright"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-09-02 21:53:36 +0000</string>
+    </dict>
+  </lib>
+</glyph>

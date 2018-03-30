@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni032E" format="1">
+  <advance width="359"/>
+  <unicode hex="032E"/>
+  <outline>
+    <component base="uni0306" xOffset="40" yOffset="595" yScale="-1"/>
+    <contour>
+      <point x="180" y="0" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="180" y="-147" type="move" name="bottom"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.ColorIndex</key>
+      <integer>9</integer>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018-03-30 07:49:33 +0000</string>
+      <key>public.markColor</key>
+      <string>0.98,0.36,0.67,1</string>
+    </dict>
+  </lib>
+</glyph>

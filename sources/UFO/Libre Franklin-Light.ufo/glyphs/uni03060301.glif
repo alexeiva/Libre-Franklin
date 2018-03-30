@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni03060301" format="1">
+  <advance width="600"/>
+  <outline>
+    <component base="uni0306" xOffset="148"/>
+    <component base="acutecomb" xOffset="149" yOffset="178"/>
+    <contour>
+      <point x="288" y="933" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="288" y="530" type="move" name="_top"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2016-09-03 03:58:34 +0000</string>
+    </dict>
+  </lib>
+</glyph>
