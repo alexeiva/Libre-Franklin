@@ -1,0 +1,918 @@
+# buildVariable: Build a variable font from a source file
+rule buildVariable
+  command = /Users/alexeiva/venv/ftools/bin/python3 -m $
+      gftools.builder.jobrunner fontmake --output-path $out -o variable $
+      $fontmake_type $in $args $stamp
+  description = buildVariable
+
+# fix: Run gftools-fix
+rule fix
+  command = /Users/alexeiva/venv/ftools/bin/python3 -m $
+      gftools.builder.jobrunner gftools-fix-font -o $out $args $in $stamp
+  description = fix
+
+# compress: Compress to webfont
+rule compress
+  command = /Users/alexeiva/venv/ftools/bin/python3 -m $
+      gftools.builder.jobrunner fonttools ttLib.woff2 compress -o $out $in $
+      $stamp
+  description = compress
+
+# buildStat: Build a STAT table from one or more source files
+rule buildSTAT-operation
+  command = gftools-gen-stat --out $tempdir $args -- $in && mv $finalfile $
+      $out $stamp
+rule buildSTAT-postprocess
+  command = gftools-gen-stat --inplace $args -- $in $stamp
+
+# instantiateUfo: Create instance UFOs from a Glyphs or designspace file
+rule instantiateUfo
+  command = /Users/alexeiva/venv/ftools/bin/python3 -m $
+      gftools.builder.jobrunner fontmake -i "$instance_name" -o ufo $
+      $fontmake_type $in $args $stamp
+  description = instantiateUfo
+
+# buildTTF: Build a TTF from a source file
+rule buildTTF
+  command = /Users/alexeiva/venv/ftools/bin/python3 -m $
+      gftools.builder.jobrunner fontmake --output-path $out -o ttf $
+      $fontmake_type $in $args $stamp
+  description = buildTTF
+
+# autohint: Run gftools-autohint
+rule autohint
+  command = /Users/alexeiva/venv/ftools/bin/python3 -m $
+      gftools.builder.jobrunner gftools-autohint $args -o $out $in $stamp
+  description = autohint
+
+# buildOTF: Build a OTF from a source file
+rule buildOTF
+  command = /Users/alexeiva/venv/ftools/bin/python3 -m $
+      gftools.builder.jobrunner fontmake --output-path $out -o otf $
+      $fontmake_type $in $args $stamp
+  description = buildOTF
+
+# copy: Copy a file
+rule copy
+  command = /Users/alexeiva/venv/ftools/bin/python3 -m $
+      gftools.builder.jobrunner cp $in $out $stamp
+  description = copy
+
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy1cvzyns
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy1cvzyns: $
+    buildVariable LibreFranklin.glyphs
+  operation = buildVariable
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+# Generating instance_ufos/LibreFranklin-Thin.ufo.json
+build instance_ufos/LibreFranklin-Thin.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Thin
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-ExtraLight.ufo.json
+build instance_ufos/LibreFranklin-ExtraLight.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin ExtraLight
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-Light.ufo.json
+build instance_ufos/LibreFranklin-Light.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Light
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-Regular.ufo.json
+build instance_ufos/LibreFranklin-Regular.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Regular
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-Medium.ufo.json
+build instance_ufos/LibreFranklin-Medium.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Medium
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-SemiBold.ufo.json
+build instance_ufos/LibreFranklin-SemiBold.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin SemiBold
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-Bold.ufo.json
+build instance_ufos/LibreFranklin-Bold.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Bold
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-ExtraBold.ufo.json
+build instance_ufos/LibreFranklin-ExtraBold.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin ExtraBold
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-Black.ufo.json
+build instance_ufos/LibreFranklin-Black.ufo.json: instantiateUfo $
+    LibreFranklin.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Black
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpjk7ohukt
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpjk7ohukt: $
+    buildVariable LibreFranklin-Italic.glyphs
+  operation = buildVariable
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+# Generating instance_ufos/LibreFranklin-ThinItalic.ufo.json
+build instance_ufos/LibreFranklin-ThinItalic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Thin Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-ExtraLightItalic.ufo.json
+build instance_ufos/LibreFranklin-ExtraLightItalic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin ExtraLight Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-LightItalic.ufo.json
+build instance_ufos/LibreFranklin-LightItalic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Light Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-Italic.ufo.json
+build instance_ufos/LibreFranklin-Italic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-MediumItalic.ufo.json
+build instance_ufos/LibreFranklin-MediumItalic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Medium Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-SemiBoldItalic.ufo.json
+build instance_ufos/LibreFranklin-SemiBoldItalic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin SemiBold Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-BoldItalic.ufo.json
+build instance_ufos/LibreFranklin-BoldItalic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Bold Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-ExtraBoldItalic.ufo.json
+build instance_ufos/LibreFranklin-ExtraBoldItalic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin ExtraBold Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreFranklin-BlackItalic.ufo.json
+build instance_ufos/LibreFranklin-BlackItalic.ufo.json: instantiateUfo $
+    LibreFranklin-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Franklin Black Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating ../fonts/webfonts/LibreFranklin[wght].woff2
+build ../fonts/webfonts/LibreFranklin[wght].woff2: compress $
+    ../fonts/variable/LibreFranklin[wght].ttf
+  operation = compress
+# Postprocessing  with BuildSTAT
+build $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpnvxilg8h.buildStatstamp: $
+    buildSTAT-postprocess ../fonts/variable/LibreFranklin-Italic[wght].ttf $
+    ../fonts/variable/LibreFranklin[wght].ttf | $
+    ../fonts/variable/LibreFranklin-Italic[wght].ttf $
+    ../fonts/variable/LibreFranklin[wght].ttf
+  stamp =  && touch $
+      /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpnvxilg8h.buildStatstamp
+  postprocess = buildStat
+  args = --src /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpykcuftqc
+# Generating ../fonts/webfonts/LibreFranklin-Italic[wght].woff2
+build ../fonts/webfonts/LibreFranklin-Italic[wght].woff2: compress $
+    ../fonts/variable/LibreFranklin-Italic[wght].ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-Thin.woff2
+build ../fonts/webfonts/LibreFranklin-Thin.woff2: compress $
+    ../fonts/ttf/LibreFranklin-Thin.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-ExtraLight.woff2
+build ../fonts/webfonts/LibreFranklin-ExtraLight.woff2: compress $
+    ../fonts/ttf/LibreFranklin-ExtraLight.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-Light.woff2
+build ../fonts/webfonts/LibreFranklin-Light.woff2: compress $
+    ../fonts/ttf/LibreFranklin-Light.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-Regular.woff2
+build ../fonts/webfonts/LibreFranklin-Regular.woff2: compress $
+    ../fonts/ttf/LibreFranklin-Regular.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-Medium.woff2
+build ../fonts/webfonts/LibreFranklin-Medium.woff2: compress $
+    ../fonts/ttf/LibreFranklin-Medium.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-SemiBold.woff2
+build ../fonts/webfonts/LibreFranklin-SemiBold.woff2: compress $
+    ../fonts/ttf/LibreFranklin-SemiBold.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-Bold.woff2
+build ../fonts/webfonts/LibreFranklin-Bold.woff2: compress $
+    ../fonts/ttf/LibreFranklin-Bold.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-ExtraBold.woff2
+build ../fonts/webfonts/LibreFranklin-ExtraBold.woff2: compress $
+    ../fonts/ttf/LibreFranklin-ExtraBold.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-Black.woff2
+build ../fonts/webfonts/LibreFranklin-Black.woff2: compress $
+    ../fonts/ttf/LibreFranklin-Black.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-ThinItalic.woff2
+build ../fonts/webfonts/LibreFranklin-ThinItalic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-ThinItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-ExtraLightItalic.woff2
+build ../fonts/webfonts/LibreFranklin-ExtraLightItalic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-ExtraLightItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-LightItalic.woff2
+build ../fonts/webfonts/LibreFranklin-LightItalic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-LightItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-Italic.woff2
+build ../fonts/webfonts/LibreFranklin-Italic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-Italic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-MediumItalic.woff2
+build ../fonts/webfonts/LibreFranklin-MediumItalic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-MediumItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-SemiBoldItalic.woff2
+build ../fonts/webfonts/LibreFranklin-SemiBoldItalic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-SemiBoldItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-BoldItalic.woff2
+build ../fonts/webfonts/LibreFranklin-BoldItalic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-BoldItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-ExtraBoldItalic.woff2
+build ../fonts/webfonts/LibreFranklin-ExtraBoldItalic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-ExtraBoldItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreFranklin-BlackItalic.woff2
+build ../fonts/webfonts/LibreFranklin-BlackItalic.woff2: compress $
+    ../fonts/ttf/LibreFranklin-BlackItalic.ttf
+  operation = compress
+# Generating ../fonts/variable/LibreFranklin[wght].ttf
+build ../fonts/variable/LibreFranklin[wght].ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy1cvzyns
+  operation = fix
+  args = 
+# Generating ../fonts/variable/LibreFranklin-Italic[wght].ttf
+build ../fonts/variable/LibreFranklin-Italic[wght].ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpjk7ohukt
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp_bsuv77i
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp_bsuv77i: $
+    buildTTF instance_ufos/LibreFranklin-Thin.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp3ht25v0f
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp3ht25v0f: $
+    buildOTF instance_ufos/LibreFranklin-Thin.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpxwtjeabb
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpxwtjeabb: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp_bsuv77i
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-Thin.ttf
+build ../fonts/ttf/LibreFranklin-Thin.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpxwtjeabb
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-Thin.otf
+build ../fonts/otf/LibreFranklin-Thin.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp3ht25v0f
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5f0411xq
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5f0411xq: $
+    buildTTF instance_ufos/LibreFranklin-ExtraLight.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmppb9y5ovv
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmppb9y5ovv: $
+    buildOTF instance_ufos/LibreFranklin-ExtraLight.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpib1t4v7r
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpib1t4v7r: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5f0411xq
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-ExtraLight.ttf
+build ../fonts/ttf/LibreFranklin-ExtraLight.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpib1t4v7r
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-ExtraLight.otf
+build ../fonts/otf/LibreFranklin-ExtraLight.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmppb9y5ovv
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp1sv1vine
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp1sv1vine: $
+    buildTTF instance_ufos/LibreFranklin-Light.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpnqvtqbl9
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpnqvtqbl9: $
+    buildOTF instance_ufos/LibreFranklin-Light.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp9h8l4rzo
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp9h8l4rzo: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp1sv1vine
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-Light.ttf
+build ../fonts/ttf/LibreFranklin-Light.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp9h8l4rzo
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-Light.otf
+build ../fonts/otf/LibreFranklin-Light.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpnqvtqbl9
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpgklomz0m
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpgklomz0m: $
+    buildTTF instance_ufos/LibreFranklin-Regular.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpbrm2bb0g
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpbrm2bb0g: $
+    buildOTF instance_ufos/LibreFranklin-Regular.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpmzc1div0
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpmzc1div0: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpgklomz0m
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-Regular.ttf
+build ../fonts/ttf/LibreFranklin-Regular.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpmzc1div0
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-Regular.otf
+build ../fonts/otf/LibreFranklin-Regular.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpbrm2bb0g
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpiou91k_k
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpiou91k_k: $
+    buildTTF instance_ufos/LibreFranklin-Medium.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpwfhczyjj
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpwfhczyjj: $
+    buildOTF instance_ufos/LibreFranklin-Medium.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmptk67gggn
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmptk67gggn: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpiou91k_k
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-Medium.ttf
+build ../fonts/ttf/LibreFranklin-Medium.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmptk67gggn
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-Medium.otf
+build ../fonts/otf/LibreFranklin-Medium.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpwfhczyjj
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpian10crv
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpian10crv: $
+    buildTTF instance_ufos/LibreFranklin-SemiBold.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp9p987q_e
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp9p987q_e: $
+    buildOTF instance_ufos/LibreFranklin-SemiBold.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpirmeg4lt
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpirmeg4lt: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpian10crv
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-SemiBold.ttf
+build ../fonts/ttf/LibreFranklin-SemiBold.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpirmeg4lt
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-SemiBold.otf
+build ../fonts/otf/LibreFranklin-SemiBold.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp9p987q_e
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpouoyq3rh
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpouoyq3rh: $
+    buildTTF instance_ufos/LibreFranklin-Bold.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp6kxd1fzg
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp6kxd1fzg: $
+    buildOTF instance_ufos/LibreFranklin-Bold.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp8f9w4byd
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp8f9w4byd: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpouoyq3rh
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-Bold.ttf
+build ../fonts/ttf/LibreFranklin-Bold.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp8f9w4byd
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-Bold.otf
+build ../fonts/otf/LibreFranklin-Bold.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp6kxd1fzg
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpa3629pbl
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpa3629pbl: $
+    buildTTF instance_ufos/LibreFranklin-ExtraBold.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpt5mrtf7w
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpt5mrtf7w: $
+    buildOTF instance_ufos/LibreFranklin-ExtraBold.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmprkk1nyll
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmprkk1nyll: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpa3629pbl
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-ExtraBold.ttf
+build ../fonts/ttf/LibreFranklin-ExtraBold.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmprkk1nyll
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-ExtraBold.otf
+build ../fonts/otf/LibreFranklin-ExtraBold.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpt5mrtf7w
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpmirn5vdd
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpmirn5vdd: $
+    buildTTF instance_ufos/LibreFranklin-Black.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpcfdbhupw
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpcfdbhupw: $
+    buildOTF instance_ufos/LibreFranklin-Black.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp7wfhnp20
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp7wfhnp20: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpmirn5vdd
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-Black.ttf
+build ../fonts/ttf/LibreFranklin-Black.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp7wfhnp20
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-Black.otf
+build ../fonts/otf/LibreFranklin-Black.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpcfdbhupw
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5q5s9ig9
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5q5s9ig9: $
+    buildTTF instance_ufos/LibreFranklin-ThinItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpjh17ifs4
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpjh17ifs4: $
+    buildOTF instance_ufos/LibreFranklin-ThinItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp8cbpnwbl
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp8cbpnwbl: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5q5s9ig9
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-ThinItalic.ttf
+build ../fonts/ttf/LibreFranklin-ThinItalic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp8cbpnwbl
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-ThinItalic.otf
+build ../fonts/otf/LibreFranklin-ThinItalic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpjh17ifs4
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp41h8f0nb
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp41h8f0nb: $
+    buildTTF instance_ufos/LibreFranklin-ExtraLightItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp_l4znnm0
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp_l4znnm0: $
+    buildOTF instance_ufos/LibreFranklin-ExtraLightItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpz8si0364
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpz8si0364: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp41h8f0nb
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-ExtraLightItalic.ttf
+build ../fonts/ttf/LibreFranklin-ExtraLightItalic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpz8si0364
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-ExtraLightItalic.otf
+build ../fonts/otf/LibreFranklin-ExtraLightItalic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp_l4znnm0
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpg6ql8ymj
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpg6ql8ymj: $
+    buildTTF instance_ufos/LibreFranklin-LightItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmphvit0s9t
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmphvit0s9t: $
+    buildOTF instance_ufos/LibreFranklin-LightItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpdgpuj82g
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpdgpuj82g: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpg6ql8ymj
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-LightItalic.ttf
+build ../fonts/ttf/LibreFranklin-LightItalic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpdgpuj82g
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-LightItalic.otf
+build ../fonts/otf/LibreFranklin-LightItalic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmphvit0s9t
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpx_az48go
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpx_az48go: $
+    buildTTF instance_ufos/LibreFranklin-Italic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpzhka6xro
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpzhka6xro: $
+    buildOTF instance_ufos/LibreFranklin-Italic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpj1bpbvaj
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpj1bpbvaj: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpx_az48go
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-Italic.ttf
+build ../fonts/ttf/LibreFranklin-Italic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpj1bpbvaj
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-Italic.otf
+build ../fonts/otf/LibreFranklin-Italic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpzhka6xro
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp61duf0do
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp61duf0do: $
+    buildTTF instance_ufos/LibreFranklin-MediumItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp160urcxt
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp160urcxt: $
+    buildOTF instance_ufos/LibreFranklin-MediumItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpkqw4s8mx
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpkqw4s8mx: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp61duf0do
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-MediumItalic.ttf
+build ../fonts/ttf/LibreFranklin-MediumItalic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpkqw4s8mx
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-MediumItalic.otf
+build ../fonts/otf/LibreFranklin-MediumItalic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp160urcxt
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpb4d5khr2
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpb4d5khr2: $
+    buildTTF instance_ufos/LibreFranklin-SemiBoldItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpimw54qha
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpimw54qha: $
+    buildOTF instance_ufos/LibreFranklin-SemiBoldItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmptdy0mpwf
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmptdy0mpwf: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpb4d5khr2
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-SemiBoldItalic.ttf
+build ../fonts/ttf/LibreFranklin-SemiBoldItalic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmptdy0mpwf
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-SemiBoldItalic.otf
+build ../fonts/otf/LibreFranklin-SemiBoldItalic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpimw54qha
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpusi8fwh2
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpusi8fwh2: $
+    buildTTF instance_ufos/LibreFranklin-BoldItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp32x0xbq1
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp32x0xbq1: $
+    buildOTF instance_ufos/LibreFranklin-BoldItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpl7w14lde
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpl7w14lde: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpusi8fwh2
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-BoldItalic.ttf
+build ../fonts/ttf/LibreFranklin-BoldItalic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpl7w14lde
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-BoldItalic.otf
+build ../fonts/otf/LibreFranklin-BoldItalic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp32x0xbq1
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpcyd3w4_0
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpcyd3w4_0: $
+    buildTTF instance_ufos/LibreFranklin-ExtraBoldItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy5g3sh1_
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy5g3sh1_: $
+    buildOTF instance_ufos/LibreFranklin-ExtraBoldItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5di2geej
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5di2geej: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpcyd3w4_0
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-ExtraBoldItalic.ttf
+build ../fonts/ttf/LibreFranklin-ExtraBoldItalic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp5di2geej
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-ExtraBoldItalic.otf
+build ../fonts/otf/LibreFranklin-ExtraBoldItalic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy5g3sh1_
+  operation = fix
+  args = 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy7ykrjci
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy7ykrjci: $
+    buildTTF instance_ufos/LibreFranklin-BlackItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp4he6695h
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp4he6695h: $
+    buildOTF instance_ufos/LibreFranklin-BlackItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp44wpx951
+build /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp44wpx951: $
+    autohint /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpy7ykrjci
+  operation = autohint
+  args = --fail-ok  --auto-script
+# Generating ../fonts/ttf/LibreFranklin-BlackItalic.ttf
+build ../fonts/ttf/LibreFranklin-BlackItalic.ttf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp44wpx951
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreFranklin-BlackItalic.otf
+build ../fonts/otf/LibreFranklin-BlackItalic.otf: fix $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmp4he6695h
+  operation = fix
+  args = 
+default ../fonts/webfonts/LibreFranklin[wght].woff2 $
+    /var/folders/xm/8_gkzvmn2f30h2nxxfdh_n380000gp/T/tmpnvxilg8h.buildStatstamp $
+    ../fonts/webfonts/LibreFranklin-Italic[wght].woff2 $
+    ../fonts/webfonts/LibreFranklin-Thin.woff2 $
+    ../fonts/webfonts/LibreFranklin-ExtraLight.woff2 $
+    ../fonts/webfonts/LibreFranklin-Light.woff2 $
+    ../fonts/webfonts/LibreFranklin-Regular.woff2 $
+    ../fonts/webfonts/LibreFranklin-Medium.woff2 $
+    ../fonts/webfonts/LibreFranklin-SemiBold.woff2 $
+    ../fonts/webfonts/LibreFranklin-Bold.woff2 $
+    ../fonts/webfonts/LibreFranklin-ExtraBold.woff2 $
+    ../fonts/webfonts/LibreFranklin-Black.woff2 $
+    ../fonts/webfonts/LibreFranklin-ThinItalic.woff2 $
+    ../fonts/webfonts/LibreFranklin-ExtraLightItalic.woff2 $
+    ../fonts/webfonts/LibreFranklin-LightItalic.woff2 $
+    ../fonts/webfonts/LibreFranklin-Italic.woff2 $
+    ../fonts/webfonts/LibreFranklin-MediumItalic.woff2 $
+    ../fonts/webfonts/LibreFranklin-SemiBoldItalic.woff2 $
+    ../fonts/webfonts/LibreFranklin-BoldItalic.woff2 $
+    ../fonts/webfonts/LibreFranklin-ExtraBoldItalic.woff2 $
+    ../fonts/webfonts/LibreFranklin-BlackItalic.woff2 $
+    ../fonts/otf/LibreFranklin-Thin.otf $
+    ../fonts/otf/LibreFranklin-ExtraLight.otf $
+    ../fonts/otf/LibreFranklin-Light.otf $
+    ../fonts/otf/LibreFranklin-Regular.otf $
+    ../fonts/otf/LibreFranklin-Medium.otf $
+    ../fonts/otf/LibreFranklin-SemiBold.otf $
+    ../fonts/otf/LibreFranklin-Bold.otf $
+    ../fonts/otf/LibreFranklin-ExtraBold.otf $
+    ../fonts/otf/LibreFranklin-Black.otf $
+    ../fonts/otf/LibreFranklin-ThinItalic.otf $
+    ../fonts/otf/LibreFranklin-ExtraLightItalic.otf $
+    ../fonts/otf/LibreFranklin-LightItalic.otf $
+    ../fonts/otf/LibreFranklin-Italic.otf $
+    ../fonts/otf/LibreFranklin-MediumItalic.otf $
+    ../fonts/otf/LibreFranklin-SemiBoldItalic.otf $
+    ../fonts/otf/LibreFranklin-BoldItalic.otf $
+    ../fonts/otf/LibreFranklin-ExtraBoldItalic.otf $
+    ../fonts/otf/LibreFranklin-BlackItalic.otf
